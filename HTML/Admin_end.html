@@ -1,0 +1,61 @@
+<?php
+session_start();
+if($_SESSION['authuser']!=1)
+{
+echo"ACCESS DENIED";
+exit();
+}
+$connect = mysqli_connect("localhost", "root", "") or die ("check your server connection.");
+
+mysqli_select_db($connect,"2008b4a5723p");
+
+$name = $_POST['name'];
+$cname = $_POST['cname'];
+$maxmarks = $_POST['maxmarks'];
+$concept1 = $_POST['concept1'];
+$concept2 = $_POST['concept2'];
+$concept3 = $_POST['concept3'];
+
+
+if($name=='' or $cname=='' or $maxmarks=='')
+echo"ERROR IN UPDATION";
+
+else{
+$insert = "INSERT INTO exam_result(uname,cname,max_marks,module1,module2,module3)
+values('$name','$cname','$maxmarks','$concept1','$concept2','$concept3')";
+
+$result3=mysqli_query($connect,$insert) or die(mysqli_error());
+
+echo "MARKS UPDATED SUCCESSFULY<br/><a href='admin_upload_exam_grades.php'>Back</a>";
+}
+?>
+<?php
+   $connect = mysqli_connect("localhost", "root", "") or die ("check your server connection.");
+    mysqli_select_db($connect,"2008b4a5723p");
+
+    $query1="CALL avg_marks()";
+    $result3=mysqli_query($connect,$query1) or die ("");
+?>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_end</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Admin_end_styles.css">
+    <link rel="stylesheet" href="assets/css/Admin_end.css">
+</head>
+
+<body><div class="highlight-clean">
+    <div class="container">
+        <div class="intro"></div>
+        <div class="buttons"><a class="btn btn-primary" href="Admin_2nd.html">MORE PATIENTS</a><a class="btn btn-primary" href="Home.html">HOME</a></div>
+    </div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

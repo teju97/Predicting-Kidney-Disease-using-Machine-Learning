@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Analyze_styles.css">
+    <link rel="stylesheet" href="assets/css/Analyze.css">
+</head>
+
+<body><div class="register-photo">
+    <div class="form-container">
+        <form method="post" action="test.php" method="POST">
+		<h3 class="text-center"><strong>Enter the values</strong></h3>
+		<div class="leftcol" style="width:50%;float:left;padding-right:10px;padding-top:30px;">
+            
+            <div class="form-group"><input name="a" class="form-control" type="number" min="0" max="5" placeholder="Albumin(between 0-5)" /></div>
+            <div class="form-group"><input name="b" class="form-control" type="number" min="0" max="5" placeholder="Sugar(between 0-5)" /></div>
+            <div class="form-group"><input name="c" class="form-control" type="number" min="0" max="1" placeholder="rbc(0 or 1)" /></div>
+            <div class="form-group"><input name="d" type="number" min="0" class="form-control" placeholder="Blood Glucose Random" /></div>
+            <div class="form-group"><input name="e" class="form-control" min="0" type="number" placeholder="Blood Urea" step="0.1" /></div>
+            <div class="form-group"><input name="f" class="form-control" min="0" type="number" placeholder="Serum Creatinine" step="0.1"/></div>
+            <div class="form-group"><input name="g" class="form-control" min="0" type="number" placeholder="Hemoglobin" step="0.01"/></div>
+			<div class="form-group"><input name="o" type="number" class="form-control" min="0" max="200" placeholder="Blood Pressure(in mm/Hg)" /></div>
+        </div>
+        <div class="rightcol" style="width:50%;float:right;padding-left:10px;padding-top:30px;">
+            <div class="form-group"><input name="h" type="number" min="0" class="form-control" placeholder="Packed Cell Volume" /></div>
+            <div class="form-group"><input name="i" type="number" min="0" class="form-control" step="0.1" placeholder="Red Blood Cell Count" /></div>
+            <div class="form-group"><input name="j" type="number" min="0" max="1" class="form-control" placeholder="Hypertension(0 or 1)" /></div>
+            <div class="form-group"><input name="k" type="number" min="0" max="1" class="form-control" placeholder="Diabetes Mellitus(0 or 1)" /></div>
+            <div class="form-group"><input name="l" type="number" min="0" max="1" class="form-control" placeholder="Appetite(0 or 1)" /></div>
+            <div class="form-group"><input name="m" type="number" min="0" max="1" class="form-control" placeholder="Pedal Edema(0 or 1)" /></div>
+            <div class="form-group"><input name="n" type="number" min="0" max="1" class="form-control" placeholder="Anemia(0 or 1)" /></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Analyse</button></div>
+			<a href="Home.php" class="back" type="text" style="margin-left:44%;color:black;margin-top:15%;"><u>Back</u></a>
+		</div>
+		
+        </form>
+    </div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
